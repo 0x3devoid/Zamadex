@@ -2,8 +2,10 @@
 
 import Image from "next/image";
 import { Wallet, ChevronDown, ArrowUpDown } from "lucide-react";
+import { useWallet } from "@/context/walletContext";
 
 export default function SwapBox() {
+    const {isConnected} = useWallet()
     return (
         <>
             <div
@@ -59,7 +61,7 @@ export default function SwapBox() {
 
                 {/* Swap Arrow */}
                 <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-10 cursor-pointer">
-                    <button className="bg-white border border-gray-200 rounded-full p-2 shadow hover:bg-gray-100 transition">
+                    <button className="bg-white border border-gray-200 rounded-full p-2 shadow hover:bg-gray-100 transition cursor-pointer">
                         <ArrowUpDown className="w-5 h-5 text-gray-600" />
                     </button>
                 </div>
@@ -92,10 +94,12 @@ export default function SwapBox() {
                             <ChevronDown className="w-5 h-5 text-gray-600" />
                         </div>
                         <input
+                        
                             type="number"
                             placeholder="0"
                             step="any"
-                            className="text-right bg-transparent placeholder-gray-800 text-lg font-bold outline-none w-1/2"
+                            className="text-right bg-transparent placeholder-gray-800 text-lg font-bold outline-none w-1/2 cursor-not-allowed"
+                            disabled
                         />
 
                     </div>
@@ -109,8 +113,12 @@ export default function SwapBox() {
 
             </div>
 
-            <div className="flex justify-center items-center font-['Roboto'] mb-[50px]">
-                <button className="lg:w-[500px] sm:w-[400px] w-full bg-[#f8a007] border border-[#FCB53B] text-black cursor-pointer font-bold text-xl py-4 px-6 rounded-2xl hover:bg-[#FCB53B] transition-colors">CONNECT WALLET</button>
+            <div className="flex justify-center items-center font-['Roboto'] mb-[50px]" style={{ fontFamily: "var(--font-handwriting)" }}>
+                <button className="lg:w-[500px] sm:w-[400px] w-full bg-[#ffdda2] border border-[#FCB53B] text-black cursor-pointer font-bold text-xl py-4 px-6 rounded-2xl hover:bg-[#FCB53B] transition-colors">
+                    
+                    {isConnected ? "ENTER AN AMOUNT" : "CONNECT WALLET"}
+                    
+                </button>
             </div>
 
         </>

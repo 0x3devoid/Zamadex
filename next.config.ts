@@ -11,7 +11,7 @@ const nextConfig = {
     ignoreDuringBuilds: false,
   },
   experimental: {
-    optimizeCss: true,
+    optimizeCss: false,
     typedRoutes: true, // Enable typed routes for better type safety
   },
   // Configure headers for better caching and security

@@ -3,7 +3,8 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import type { NavItem } from '../types'
 import Image from 'next/image'
-import { ArrowLeftRight, Droplets, Wallet, ChevronRightIcon } from 'lucide-react'
+import { ArrowLeftRight, Droplets, Wallet } from 'lucide-react'
+import { ConnectWalletButton } from '@/utils/usableComponents'
 
 
 
@@ -53,11 +54,9 @@ const Navbar: React.FC = () => {
         </div>
 
         <div>
-          <button className='bg-[#000] flex justify-between space-x-3 font-[Roboto] border border-[#111010] text-white cursor-pointer font-bold py-2 px-4 rounded-2xl hover:bg-[#333] hover:border-[#333] transition-colors'>
-            <Wallet className="w-4 h-6" />
-            <p>Connect</p>
-            <ChevronRightIcon className="w-5 h-5 text-gray-600"/>
-          </button>
+         
+
+          <ConnectWalletButton/>
         </div>
 
       </div>
