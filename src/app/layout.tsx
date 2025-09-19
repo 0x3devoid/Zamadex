@@ -2,6 +2,14 @@ import type { Metadata } from 'next'
 import Navbar from '../components/Navbar'
 import './globals.css'
 import { WalletProvider } from '@/context/walletContext'
+import { Gamja_Flower } from 'next/font/google'
+
+const gamja = Gamja_Flower({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-handwriting'
+})
+
 
 
 export const metadata: Metadata = {
@@ -18,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${gamja.variable}`}>
       <body className="min-h-screen bg-gray-50 antialiased">
         <WalletProvider>
           <Navbar />

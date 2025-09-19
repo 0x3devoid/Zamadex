@@ -18,10 +18,10 @@ const Home: React.FC = () => {
 
 
       <div className="text-center sm:mt-[70px] lg:mt-[20px]">
-        <h1 className='text-[25px] lg:text-[35px] font-[900]' style={{ fontFamily: "var(--font-handwriting)" }}>
+        <h1 className='text-[25px] lg:text-[35px] font-[900] handwriting'>
           A DEX FOR EVERY
         </h1>
-        <h1 className='text-[25px] lg:text-[35px] font-[900]' style={{ fontFamily: "var(--font-handwriting)" }}>
+        <h1 className='text-[25px] lg:text-[35px] font-[900] handwriting'>
           ZAMA TESTER
         </h1>
 

@@ -113,8 +113,8 @@ export default function SwapBox() {
 
             </div>
 
-            <div className="flex justify-center items-center font-['Roboto'] mb-5" style={{ fontFamily: "var(--font-handwriting)" }}>
-                <button className="lg:w-[500px] sm:w-[400px] w-full bg-[#ffdda2] border border-[#FCB53B] text-black cursor-pointer font-bold text-xl py-4 px-6 rounded-2xl hover:bg-[#FCB53B] transition-colors">
+            <div className="flex justify-center items-center font-['Roboto'] mb-5 handwriting" >
+                <button className="lg:w-[500px] sm:w-[400px] w-full bg-[#ffdda2] border border-[#FCB53B] text-black cursor-pointer font-bold text-xl py-4 px-6 rounded-2xl hover:bg-[#f0c172] transition-colors">
                     
                     {isConnected ? "ENTER AN AMOUNT" : "CONNECT WALLET"}
                     

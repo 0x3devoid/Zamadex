@@ -20,6 +20,12 @@ body{
   color: #111827;
   box-sizing: border-box;
 }
+
+.handwriting {
+  font-family: var(--font-handwriting);
+  font-size: 3rem; /* try 32px instead of 20px */
+  line-height: 1; /* so it doesn’t get squished */
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
